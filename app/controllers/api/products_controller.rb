@@ -7,7 +7,7 @@ class Api::ProductsController < ApplicationController
   end
   
   def product_action
-    @product = Product.first
+    @product = Product.find_by(name: "Starburst")
     render 'product.json.jb'
     
   end
