@@ -1,0 +1,24 @@
+<div class="jumbotron jumbotron-fluid">
+  <div class="container">
+    <h1 class="display-4">Candy Shop</h1>
+    <p class="lead">I'll take you to the candy shop.</p>
+  </div>
+</div>
+
+<%= @products.each do |product| %>
+
+<div class="card text-white bg-info mb-3" style="max-width: 540px;">
+  <div class="row no-gutters">
+    <div class="col-md-4">
+      <img src="<%= product.images[0].url %>" class="card-img" alt="">
+    </div>
+    <div class="col-md-8">
+      <div class="card-body">
+        <h5 class="card-title"><%= product.name %></h5>
+        <p class="card-text">Price:<%= product.price %></p>
+        <p class="card-text">Description:<%= product.description %></p>
+      </div>
+    </div>
+  </div>
+</div>
+<% end %>
